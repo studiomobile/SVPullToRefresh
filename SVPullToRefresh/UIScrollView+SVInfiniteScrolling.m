@@ -209,7 +209,7 @@ UIEdgeInsets scrollViewOriginalContentInsets;
         if (self.direction == SVInfiniteScrollingDirectionVertical)
             self.frame = CGRectMake(0, self.scrollView.contentSize.height, self.bounds.size.width, SVInfiniteScrollingViewHeight);
         else if (self.direction == SVInfiniteScrollingDirectionHorizontal)
-            self.frame = CGRectMake(self.scrollView.contentSize.width, 0, SVInfiniteScrollingViewWidth, self.bounds.size.height);
+            self.frame = CGRectMake(self.scrollView.contentSize.width, (self.scrollView.contentSize.height - SVInfiniteScrollingViewHeight) / 2, SVInfiniteScrollingViewWidth, SVInfiniteScrollingViewHeight);
     }
 }
 
